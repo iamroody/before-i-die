@@ -15,16 +15,34 @@
   }
 }
 
+@mixin box-shadow($shadow) {
+  -moz-box-shadow:    $shadow;
+  -webkit-box-shadow: $shadow;
+  box-shadow:         $shadow;
+}
+
 .clearfix {@include clearfix;}
+
+$boardColor: #333;
+$sentenceColor: #FCFCFC;
 
 body {
   width: 1260px;
   margin: 0 auto;
+  background: $boardColor url('board.jpg') repeat;
+  color: $sentenceColor;
   padding: 10px;
+  text-shadow: 0 0 4px #FFF;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
 }
 .dashboard {
   font-size: 18px;
-  line-height: 200%;
+  line-height: 340%;
   .column {
     width: 33.33%;
     float: left;
@@ -36,10 +54,14 @@ body {
   form {
     display: inline;
     input[type=text] {
-      border-width: 0 0 1px 0;
-      border-color: #666;
+      border-width: 0 0 2px 0;
+      border-color: darken($sentenceColor, 10%);
+      color: $sentenceColor;
+      text-shadow: 0 0 4px #FFF;
+      @include box-shadow(0 4px 5px -4px darken($sentenceColor, 10%));
       width: 220px;
-      font-size: 18px;
+      font-size: 22px;
+      background-color: transparent;
       &:focus {
         outline: 0;
       }
