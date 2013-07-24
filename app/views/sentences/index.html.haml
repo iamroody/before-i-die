@@ -1,0 +1,8 @@
+%h1 Before I die...
+.dashboard.clearfix
+  - 3.times do |column|
+    .column
+      %ul
+        - 18.times do |row|
+          - sentence = @board.sentences.find_or_initialize_by(column: column, row: row)
+          %li= render 'item', sentence: sentence

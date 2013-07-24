@@ -1,0 +1,5 @@
+Before I die I want to
+= form_for [@board, sentence], remote: true do |f|
+  = f.text_field :content
+  = f.hidden_field :column, value: sentence.column
+  = f.hidden_field :row, value: sentence.row

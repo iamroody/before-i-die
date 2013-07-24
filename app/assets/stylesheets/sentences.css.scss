@@ -1,0 +1,48 @@
+// Place all the styles related to the sentences controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix {@include clearfix;}
+
+body {
+  width: 1260px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.dashboard {
+  font-size: 18px;
+  line-height: 200%;
+  .column {
+    width: 33.33%;
+    float: left;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  form {
+    display: inline;
+    input[type=text] {
+      border-width: 0 0 1px 0;
+      border-color: #666;
+      width: 220px;
+      font-size: 18px;
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}
