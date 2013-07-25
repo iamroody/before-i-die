@@ -26,12 +26,12 @@
 $boardColor: #333;
 $sentenceColor: #FCFCFC;
 
-$columnWidth: 420px;
+$columnWidth: 450px;
 $columnNum: 6;
+$columnGap: 30px;
 
 body {
-  width: $columnWidth * $columnNum;
-  margin: 0 auto;
+  width: $columnWidth * $columnNum + $columnGap * ($columnNum - 1);
   background: $boardColor url('board.jpg') repeat;
   color: $sentenceColor;
   padding: 10px 20px;
@@ -45,11 +45,12 @@ h1 {
 }
 
 .dashboard {
-  margin-top: 120px;
   font-size: 18px;
   line-height: 340%;
+  margin-left: -$columnGap;
   .column {
     width: $columnWidth;
+    margin-left: $columnGap;
     float: left;
   }
   ul {
@@ -64,7 +65,7 @@ h1 {
       color: $sentenceColor;
       text-shadow: 0 0 4px #FFF;
       @include box-shadow(0 4px 5px -4px darken($sentenceColor, 10%));
-      width: 220px;
+      width: 250px;
       font-size: 22px;
       background-color: transparent;
       &:focus {
