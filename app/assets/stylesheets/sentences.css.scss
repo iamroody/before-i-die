@@ -26,12 +26,15 @@
 $boardColor: #333;
 $sentenceColor: #FCFCFC;
 
+$columnWidth: 420px;
+$columnNum: 6;
+
 body {
-  width: 1260px;
+  width: $columnWidth * $columnNum;
   margin: 0 auto;
   background: $boardColor url('board.jpg') repeat;
   color: $sentenceColor;
-  padding: 10px;
+  padding: 10px 20px;
   text-shadow: 0 0 4px #FFF;
   font-family: sans-serif;
 }
@@ -40,11 +43,13 @@ h1 {
   font-size: 48px;
   letter-spacing: 2px;
 }
+
 .dashboard {
+  margin-top: 120px;
   font-size: 18px;
   line-height: 340%;
   .column {
-    width: 33.33%;
+    width: $columnWidth;
     float: left;
   }
   ul {
