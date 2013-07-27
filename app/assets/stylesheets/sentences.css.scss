@@ -24,7 +24,7 @@
 .clearfix {@include clearfix;}
 
 $boardColor: #333;
-$sentenceColor: #FCFCFC;
+$sentenceColor: rgba(255,255,255,0.5);
 
 $columnWidth: 450px;
 $columnNum: 6;
@@ -35,7 +35,6 @@ body {
   background: $boardColor image-url('board.jpg') repeat;
   color: $sentenceColor;
   padding: 10px 20px;
-  text-shadow: 0 0 4px #FFF;
   font-family: sans-serif;
 }
 
@@ -62,8 +61,8 @@ h1 {
     input[type=text] {
       border-width: 0 0 2px 0;
       border-color: darken($sentenceColor, 10%);
-      color: $sentenceColor;
-      text-shadow: 0 0 4px #FFF;
+      color: lighten($sentenceColor, 30%);
+      text-shadow: 0 0 2px #FFF;
       @include box-shadow(0 4px 5px -4px darken($sentenceColor, 10%));
       width: 250px;
       font-size: 22px;
