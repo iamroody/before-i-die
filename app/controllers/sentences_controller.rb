@@ -3,6 +3,7 @@ class SentencesController < ApplicationController
 
   def index
     @board = Board.first_or_create
+    @sentences = @board.sentences
   end
 
   def create

@@ -4,5 +4,5 @@
     .column
       %ul
         - 10.times do |row|
-          - sentence = @board.sentences.find_or_initialize_by(column: column, row: row)
+          - sentence = @sentences.select{|s| s.column == column && s.row == row}.first || @board.sentences.new(column: column, row: row)
           %li= render 'item', sentence: sentence
