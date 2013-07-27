@@ -32,7 +32,7 @@ $columnGap: 30px;
 
 body {
   width: $columnWidth * $columnNum + $columnGap * ($columnNum - 1);
-  background: $boardColor url('board.jpg') repeat;
+  background: $boardColor image-url('board.jpg') repeat;
   color: $sentenceColor;
   padding: 10px 20px;
   text-shadow: 0 0 4px #FFF;
