@@ -30,7 +30,8 @@ gem 'jbuilder', '~> 1.2'
 
 ruby '2.0.0' # heroku deploy need us set this
 
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
+
 gem 'thin'
 
 group :doc do
